@@ -1,6 +1,11 @@
 Changelog Android
 =================
 
+*5.3.6 : XX/XX/2024*
+
+	~ Fixing firebase consent on privacyBeacon payload when consent is accepted
+	~ Updating firebase-analytics dependency to 22.1.2
+
 *5.3.5 : 11/13/2024*
 
 	~ Fixing small memory leak
