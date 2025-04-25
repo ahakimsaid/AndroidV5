@@ -1,9 +1,30 @@
 Changelog Android
 =================
 
-*5.3.3 : XX/XX/2024*
+*5.3.6 : XX/XX/2024*
+
+	~ Fixing firebase consent on privacyBeacon payload when consent is accepted
+	~ Updating firebase-analytics dependency to 22.1.2
+
+*5.3.5 : 11/13/2024*
+
+	~ Fixing small memory leak
+	~ Fix privacy center layout on new edge-to-edge layout for android 15.
+	~ upgrading target version to api 35
+
+
+*5.3.4 : 09/12/2024*
+
+	~ fix Concurrent crash on iab vendors parsing when policySpecification is upgraded.
+	+ added iab2.2 datacategories description on Privacy center UI.
+	+ Upgaded iab tcfPolicyVersion to 5.
+
+
+*5.3.3 : 07/25/2024*
 
 	~ [IAB] Updated possible languages for IAB translation.
+	~ Fix bug where previous consent sometimes fails & block hits when TCConsent is initialized first.
+	~ Fix bug on resetSaveConsent.
 
 *5.3.2 : 04/22/2024*
 

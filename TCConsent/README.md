@@ -1,11 +1,11 @@
 
 <html>
 <body>
-<p><img alt="alt tag" src="../res/ca_logo.png" /></p>
+<p><img alt="alt tag" src="./res/ca_logo.png" /></p>
 <h1 id="consents-implementation-guide">Consent's Implementation Guide</h1>
 <p><strong>Android</strong></p>
-<p>Last update : <em>23/07/2024</em><br />
-Release version : <em>5.3.2</em></p>
+<p>Last update : <em>25/04/2025</em><br />
+Release version : <em>5.3.6</em></p>
 <p><div id="end_first_page" /></p>
 
 <div class="toc">
@@ -32,7 +32,10 @@ Release version : <em>5.3.2</em></p>
 </ul>
 </li>
 <li><a href="#displaying-consent">Displaying consent</a></li>
-<li><a href="#reacting-to-consent">Reacting to consent</a></li>
+<li><a href="#reacting-to-consent">Reacting to consent</a><ul>
+<li><a href="#resetting-consent">Resetting consent :</a></li>
+</ul>
+</li>
 <li><a href="#forwarding-consent-to-webviews">Forwarding consent to webViews</a></li>
 <li><a href="#forwarding-consent-to-firebaseanalytics">Forwarding consent to FirebaseAnalytics :</a></li>
 <li><a href="#changing-consent-version">Changing consent version</a></li>
@@ -77,7 +80,7 @@ Release version : <em>5.3.2</em></p>
 - Using our Privacy Center for simple Consent solution
 </code></pre>
 <p>If you're unsure of which one you should use, please contact the person in charge of your account.</p>
-<p><a href="../TCIAB/README.md">To use IAB V2 please see here</a></p>
+<p><a href="./TCIAB/README.md">To use IAB V2 please see here</a></p>
 <h2 id="setup">Setup</h2>
 <p>/!\ If you are using our interface, you need to have a version of privacy.json inside your project. This will prevent any issues with users with bad or no internet at all. If you are using IAB please also take vendor-list.json and the translation file purposes-fr.json.
 If you are not using our interface, you can't use our privacy.json, if you want a way to use a configuration file, please ask your dev team to manage this file.</p>
@@ -224,6 +227,12 @@ But when this change is adding or removing a category, or changing an ID, we sho
 </code></pre>
 <p>This one is slightly different from the last one, it was created for IAB and will not be sent automatically. It is conditioned by the field "significantChanges" in the privacy.json so that it will only launch when you need it to.</p>
 <p>Please also note that you can listen to starting and stopping the SDK events, you'll need to register your Observer that implements 'TCEventManager.TCLifecycleListener' interface via 'TCEventManager.registerLifecycleListener()' method.</p>
+<h3 id="resetting-consent">Resetting consent :</h3>
+<p>To reset user consent on devices, you can use the following method:</p>
+<pre><code>    TCConsent.getInstance().resetSavedConsent()
+</code></pre>
+<p>Please note that this method resets the consent on the device each time it is called. If you need to handle resets for specific app versions, you will have to manage that manually.</p>
+<p>Alternatively, if you are using our PrivacyCenter, you can use the resetSave field in your privacy.json. For implementation details, please contact your consultant.</p>
 <h2 id="forwarding-consent-to-webviews">Forwarding consent to webViews</h2>
 <p>Some clients need to have the consent forwarded in their webViews to manage a web container inside it.
 We created a function to get the privacy as a JSON string so you can save it inside the webView's local storage.
@@ -395,10 +404,10 @@ Depending on your app privacy configuration you might have to call some addition
 <p>We reworked saveConsent methods to only use one. If you are using the old functions they will still work for now.
 Otherwise, please check the above section "Manually displayed consent" for how this method works.</p>
 <p>/!\ Also, please note that you will need to call <strong>statViewBanner</strong> when you display your custom banner.</p>
-<p><img alt="alt tag" src="../res/TCPC_customBanner.jpeg" />
-<img alt="alt tag" src="../res/TCPC_PC.jpeg" />
-<img alt="alt tag" src="../res/CustomBanner.jpeg" />
-<img alt="alt tag" src="../res/CustomPC.jpeg" /></p>
+<p><img alt="alt tag" src="./res/TCPC_customBanner.jpeg" />
+<img alt="alt tag" src="./res/TCPC_PC.jpeg" />
+<img alt="alt tag" src="./res/CustomBanner.jpeg" />
+<img alt="alt tag" src="./res/CustomPC.jpeg" /></p>
 <p>Copy/paste-able list of functions for our interfaces:</p>
 <pre><code>    TCConsent.getInstance().refuseAllConsent();
     TCConsent.getInstance().acceptAllConsent();
@@ -422,13 +431,13 @@ Otherwise, please check the above section "Manually displayed consent" for how t
 <p>You can, of course, check our demo project for a simple implementation example.</p>
 <p><a href="https://github.com/CommandersAct/TCMobileDemo-V5/tree/master/Android/ServerSide_And_Consent">TCDemo_ServerSide_And_Consent</a></p>
 <h1 id="support-and-contacts">Support and contacts</h1>
-<p><img alt="alt tag" src="../res/ca_logo.png" /></p>
+<p><img alt="alt tag" src="./res/ca_logo.png" /></p>
 <hr />
 <p><strong>Support</strong>
 <em>support@commandersact.com</em></p>
 <p>http://www.commandersact.com</p>
 <p>Commanders Act | 3/5 rue Saint Georges - 75009 PARIS - France</p>
 <hr />
-<p>This documentation was generated on 23/07/2024 14:47:47</p>
+<p>This documentation was generated on 25/04/2025 13:32:35</p>
 </body>
 </html>
