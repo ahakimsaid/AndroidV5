@@ -1,11 +1,11 @@
 
 <html>
 <body>
-<p><img alt="alt tag" src="../res/ca_logo.png" /></p>
+<p><img alt="alt tag" src="./res/ca_logo.png" /></p>
 <h1 id="firebase-destination-implementation-guide">Firebase Destination Implementation Guide</h1>
 <p><strong>Android</strong></p>
-<p>Last update : <em>23/07/2024</em><br />
-Release version : <em>5.1.1</em></p>
+<p>Last update : <em>30/04/2025</em><br />
+Release version : <em>5.1.3</em></p>
 <p><div id="end_first_page" /></p>
 
 <div class="toc">
