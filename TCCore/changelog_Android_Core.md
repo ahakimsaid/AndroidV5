@@ -4,6 +4,22 @@ Changelog Android
 <div class="warning"></div>
 > If you want to check the previous version's changelog, you can find it here :
 
+
+*5.4.7 : 11/13/2024*
+
+	~ Fixing small memory leak
+	~ Small refactoring in lib
+	~ upgrading target version to api 35
+
+
+*5.4.6 : 07/25/2024*
+
+    ~ Fixing occasional consent failure when TCConsent(5.3.3+) is initialized before TCServerSide(5.5.5+)
+
+*5.4.5 : 07/23/2024*
+
+    ~ Fixing URLDecoder illegal hex characters error when logging events on logcat.
+
 *5.4.4 : 03/11/2024*
 
     ~ Fixing PB_ALWAYS_ENABLED on refused consent (Requires TCConsent 5.3.1+ and TCServerSide 5.5.3).
